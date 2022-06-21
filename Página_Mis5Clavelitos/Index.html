@@ -19,7 +19,6 @@
         <header>
             <!--Logo de la página-->
             <p><img src="./Images/logo.png" class="logo"/></p>
-
             <!--Barra de navegación-->
             <nav>
                 <input type="checkbox" id="menu_ham">
@@ -59,6 +58,14 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d5591.20723799568!2d-75.71172617110508!3d-14.14415117217411!3m2!1i1024!2i768!4f13.1!2m1!1sRestaurantes!5e0!3m2!1ses-419!2spe!4v1655036571084!5m2!1ses-419!2spe"></iframe>
         </section>
 
+        <!-- Agregando un script en la nueva rama -->
+        <!-- Estilo al navbar al hacer scroll -->
+        <script type="text/javascript">
+            window.addEventListener("scroll", function(){
+                var header = document.querySelector("header");
+                header.classList.toggle("abajo",window.scrollY>0);
+            })
+        </script>
         <!--Inicio del pié de página-->
         <footer>
             <!-- <div class="NAVFOOTER">

@@ -419,9 +419,32 @@ select:hover{
         flex-direction: column;
         text-align: center;
         background-color: transparent;
-        position: relative;
-    } 
+        /* Agregando animaciones a través de una nueva rama */
+        position: sticky;
+        top: 0;
+        width: 100%;
+        transition: 0.5s;
+    }
 
+    header.abajo nav ul{
+        background-color: #dcb943;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    header.abajo nav > ul > li > a:hover{
+        color: #005227;
+    }
+
+    header.abajo .logo{
+        display: none;
+    }
+    /* Aquí termina la rama */
+
+    
     /* Estilos al nav */
     nav > ul{
         display: flex;
