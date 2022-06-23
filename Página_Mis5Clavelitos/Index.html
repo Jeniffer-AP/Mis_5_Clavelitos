@@ -11,52 +11,56 @@
         <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     </head>
     <body>
 
-        <div class="grid_contenedor_index">
+        <!-- <div class="grid_contenedor_index"> -->
         <!--Cabecera de la página-->
-        <header>
+        <header class="container-fluid">
+            <div class="row">
             <!--Logo de la página-->
-            <p><img src="./Images/logo.png" class="logo"/></p>
+            <p class="col-7 col-lg-12"><img src="./Images/logo.png" class="logo"/></p>
             <!--Barra de navegación-->
-            <nav>
-                <input type="checkbox" id="menu_ham">
+            <nav class="col-5 col-lg-12" class="container">
+                <input type="checkbox" id="menu_ham"></input>
                 <label for="menu_ham" class="label_ham"> ☰ </label>
                 <!--Lista de enlaces-->
-                
-                <ul>
-                    <li><a href="./Index.html">Inicio</a></li>
-                    <li><a href="./Pages/nosotros.html">Sobre nosotros</a></li>
-                    <li><a href="./Pages/menu.html">Menú</a></li>
-                    <li><a href="./Pages/galeria.html">Galería</a></li>
-                    <li><a href="./Pages/contacto.html">Contáctanos</a></li>
+                <ul class="nav">
+                    <li class="col"><a href="./Index.html">Inicio</a></li>
+                    <li class="col"><a href="./Pages/nosotros.html">Sobre nosotros</a></li>
+                    <li class="col"><a href="./Pages/menu.html">Menú</a></li>
+                    <li class="col"><a href="./Pages/galeria.html">Galería</a></li>
+                    <li class="col"><a href="./Pages/contacto.html">Contáctanos</a></li>
                 </ul>
-                
                 <!--Fin de la lista de enlaces-->
             </nav>
             <!--Fin de la barra de navegación-->
+            </div>
         </header>
         <!--Fin del encabezado-->
         
         
         <!--Presentación del emprendimiento-->
-        <section id="presentacion">
-            
-            <p> "Mis 5 Clavelitos" te ofrece una gran variedad de platos típicos de la región de Ica
-            con la calidad, higiene y excelencia que nos caracteriza.
-            Contamos con un amplio, acogedor y moderno local, cochera, piscina y juegos recreativos
-            para tus niños. No lo pienses más y visítanos. <br/>Estamos ubicados en el distrito de Tate, Mz. B Lote 14, sector La Capilla - "El codo".
-            <br/>
-            Ven y disfruta con nosotros.
-            <h3>¡Te esperamos!</h3></p>
+        <div class="container-fluid">
+            <div class="row">
+                <section class="col-12 col-md-12 col-lg-7" id="presentacion">
+                    <p>"Mis 5 Clavelitos" te ofrece una gran variedad de platos típicos de la región de Ica
+                    con la calidad, higiene y excelencia que nos caracteriza.
+                    Contamos con un amplio, acogedor y moderno local, cochera, piscina y juegos recreativos
+                    para tus niños. No lo pienses más y visítanos. <br/>Estamos ubicados en el distrito de Tate, Mz. B Lote 14, sector La Capilla - "El codo".
+                    <br/>
+                    Ven y disfruta con nosotros.
+                    <h3>¡Te esperamos!</h3></p>
+                </section>
 
-        </section>
-        <!--Fin de la presentación-->
-
-        <section id="ubicacion">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d5591.20723799568!2d-75.71172617110508!3d-14.14415117217411!3m2!1i1024!2i768!4f13.1!2m1!1sRestaurantes!5e0!3m2!1ses-419!2spe!4v1655036571084!5m2!1ses-419!2spe"></iframe>
-        </section>
+                <!--Fin de la presentación-->
+                <section class="col-12 col-md-12 col-lg-5" id="ubicacion">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d5591.20723799568!2d-75.71172617110508!3d-14.14415117217411!3m2!1i1024!2i768!4f13.1!2m1!1sRestaurantes!5e0!3m2!1ses-419!2spe!4v1655036571084!5m2!1ses-419!2spe"></iframe>
+                </section>
+            </div>
+        </div>
 
         <!-- Agregando un script en la nueva rama -->
         <!-- Estilo al navbar al hacer scroll -->
@@ -66,28 +70,18 @@
                 header.classList.toggle("abajo",window.scrollY>0);
             })
         </script>
+
         <!--Inicio del pié de página-->
-        <footer>
-            <!-- <div class="NAVFOOTER">
-            <table summary="Footer navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
-                <tbody>
-                    <tr>
-                        <td width="33%" align="left" valign="top">Restaurant - Mis 5 Clavelitos</td>
-                        <td width="34%" align="center" valign="top"><a href="./Index.html">Subir</a></td>
-                        <td width="33%" align="right" valign="top"><a href="https://www.facebook.com" target="_blank">¡Síguenos en Facebook!</a></td>
-                    </tr>
-                </tbody>
-            </table>
-            </div> -->
-            <div class="footer">
-                <ul>
-                    <li>Restaurant - Mis 5 Clavelitos</li>
-                    <li><a href="./Index.html">Inicio</a></li>
-                    <li><a href="https://www.facebook.com" target="_blank">¡Síguenos en Facebook!</a></li>
-                </ul>
-            </div>
+        <footer class="container-fluid">
+            <ul class="nav">
+                <li class="col">Restaurant - Mis 5 Clavelitos</li>
+                <li class="col"><a href="./Index.html">Inicio</a></li>
+                <li class="col"><a href="https://www.facebook.com" target="_blank">¡Síguenos en Facebook!</a></li>
+            </ul>
         </footer>
         <!--Fin del pié de página-->
-        </div>
+
+        <!-- Bootstrap JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     </body>
 </html>

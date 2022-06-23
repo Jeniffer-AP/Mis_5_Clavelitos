@@ -10,28 +10,31 @@
         <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     </head>
     <body>
-        <!--Cabecera de la página-->
-        <header>
+         <!--Cabecera de la página-->
+        <header class="container-fluid">
+            <div class="row">
             <!--Logo de la página-->
-            <p class="centrado"><img src="./../../Images/logo.png" class="logo"/></p>
-
+            <p class="col-7 col-lg-12"><img src="./../../Images/logo.png" class="logo"/></p>
             <!--Barra de navegación-->
-            <nav>
-                <input type="checkbox" id="menu_ham">
+            <nav class="col-5 col-lg-12" class="container">
+                <input type="checkbox" id="menu_ham"></input>
                 <label for="menu_ham" class="label_ham"> ☰ </label>
                 <!--Lista de enlaces-->
-                <ul>
-                    <li><a href="./../../Index.html">Inicio</a></li>
-                    <li><a href="./../../Pages/nosotros.html">Sobre nosotros</a></li>
-                    <li><a href="./../../Pages/menu.html">Menú</a></li>
-                    <li><a href="./../../Pages/galeria.html">Galería</a></li>
-                    <li><a href="./../../Pages/contacto.html">Contáctanos</a></li>
+                <ul class="nav">
+                    <li class="col"><a href="./../../Index.html">Inicio</a></li>
+                    <li class="col"><a href="./../../Pages/nosotros.html">Sobre nosotros</a></li>
+                    <li class="col"><a href="./../../Pages/menu.html">Menú</a></li>
+                    <li class="col"><a href="./../../Pages/galeria.html">Galería</a></li>
+                    <li class="col"><a href="./../../Pages/contacto.html">Contáctanos</a></li>
                 </ul>
                 <!--Fin de la lista de enlaces-->
             </nav>
             <!--Fin de la barra de navegación-->
+            </div>
         </header>
         <!--Fin del encabezado-->
 
@@ -59,15 +62,17 @@
             })
         </script>
         
-    <footer>
-        <div class="footer">
-            <ul>
-                <li>Restaurant - Mis 5 Clavelitos</li>
-                <li><a href="./../../Index.html">Inicio</a></li>
-                <li><a href="https://www.facebook.com" target="_blank">¡Síguenos en Facebook!</a></li>
-            </ul>
-        </div>
+    <!--Inicio del pié de página-->
+    <footer class="container-fluid">
+        <ul class="nav">
+            <li class="col">Restaurant - Mis 5 Clavelitos</li>
+            <li class="col"><a href="./../../Index.html">Inicio</a></li>
+            <li class="col"><a href="https://www.facebook.com" target="_blank">¡Síguenos en Facebook!</a></li>
+        </ul>
     </footer>
     <!--Fin del pié de página-->
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
