@@ -11,26 +11,68 @@
         <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
         <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     </head>
     <body>
-         <!--Cabecera de la página-->
+        <!--Cabecera de la página-->
         <header class="container-fluid">
             <div class="row">
             <!--Logo de la página-->
-            <p class="col-7 col-lg-12"><img src="./../../Images/logo.png" class="logo"/></p>
+            <p class="col col-lg-12"><img src="./../../Images/logo.png" class="logo"/></p>
             <!--Barra de navegación-->
-            <nav class="col-5 col-lg-12" class="container">
+            <nav class="col col-lg-12" class="container">
                 <input type="checkbox" id="menu_ham"></input>
                 <label for="menu_ham" class="label_ham"> ☰ </label>
                 <!--Lista de enlaces-->
-                <ul class="nav">
+                <!-- <ul class="nav">
                     <li class="col"><a href="./../../Index.html">Inicio</a></li>
                     <li class="col"><a href="./../../Pages/nosotros.html">Sobre nosotros</a></li>
-                    <li class="col"><a href="./../../Pages/menu.html">Menú</a></li>
+                    <li class="col"><a href="#">Menú</a>
+                        <ul id="menu-vertical">
+                            <li><a href="./../menu_platos/entradas.html">Entradas</a></li>
+                            <li><a href="./../menu_platos/ensaladas.html">Ensaladas</a></li>
+                            <li><a href="./../menu_platos/platos_de_fondo.html">Platos de fondo</a></li>
+                            <li><a href="./../menu_platos/postres.html">Postres</a></li>
+                            <li><a href="./../menu_platos/bebidas.html">Bebidas</a></li>
+                            <li><a href="./../menu_platos/menu_marino.html">Menú marino</a></li>
+                        </ul></li>
                     <li class="col"><a href="./../../Pages/galeria.html">Galería</a></li>
                     <li class="col"><a href="./../../Pages/contacto.html">Contáctanos</a></li>
-                </ul>
+                </ul> -->
+
+                <div class="nav">
+                    <div class="menu">
+                      <li class="item">
+                        <a href="./../../Index.html" class="btn">Inicio</a>
+                      </li>
+              
+                      <li class="item">
+                        <a href="./../nosotros.html" class="btn">Nosotros</a>
+                      </li>
+              
+                      <li class="item" id="settings">
+                        <a href="#settings" class="btn">Menú</a>
+                        <div class="smenu">
+                          <a href="./entradas.html">Entradas</a>
+                          <a href="./ensaladas.html">Ensaladas</a>
+                          <a href="./platos_de_fondo.html">Platos de fondo</a>
+                          <a href="./postres.html">Postres</a>
+                          <a href="./bebidas.html">Bebidas</a>
+                          <a href="./menu_marino.html">Menú marino</a>
+                        </div>
+                      </li>
+              
+                      <li class="item">
+                        <a class="btn" href="./../galeria.html">Galería</a>
+                      </li>
+              
+                      <li class="item">
+                        <a class="btn" href="./../contacto.html">Contacto</a>
+                      </li>
+                    </div>
+                  </div>
+
                 <!--Fin de la lista de enlaces-->
             </nav>
             <!--Fin de la barra de navegación-->
@@ -38,17 +80,51 @@
         </header>
         <!--Fin del encabezado-->
 
-        <div class="menu_platos">
-            <h1>Entradas</h1>
-            <ul>
-                <li>Papa a la huancaína</li>
-                <li>Causa rellena</li>
-                <li>Caldo de gallina</li>
-                <li>Caldo pollo</li>
-                <li>Caldo de res</li>
-                <li>Caldo de mote</li>
-                <li>Menestrón</li>
-            </ul>
+        <div class="container" id="platos">
+            <div class="row">
+                <!-- <section class="col-12 col-lg-7" id="menu_platos">
+                    <h1>Entradas</h1>
+                    <ul>
+                        <li>Papa a la huancaína</li>
+                        <li>Causa rellena</li>
+                        <li>Caldo de gallina</li>
+                        <li>Caldo pollo</li>
+                        <li>Caldo de res</li>
+                        <li>Caldo de mote</li>
+                        <li>Menestrón</li>
+                    </ul>
+                </section> -->
+                <div class="col-12" id="entradas_derecha">
+                    <p class="p_entradas">Papa a la huancaína</p>
+                    <img class="img_menu" src="./../../Images/menu/Entradas/huancaina.jpg"/>
+                </div>
+
+                <div class="col-12" id="entradas_izquierda">
+                    <p class="p_entradas">Causa rellena</p>
+                    <img class="img_menu" src="./../../Images/menu/Entradas/causa_rellena.jpg"/>
+                </div>
+
+                <div class="col-12" id="entradas_derecha">
+                    <p class="p_entradas">Caldo de gallina</p>
+                    <img class="img_menu" src="./../../Images/menu/Entradas/caldo_gallina.jpg"/>
+                </div>
+
+                <div class="col-12" id="entradas_izquierda">
+                    <p class="p_entradas">Caldo de pollo</p>
+                    <img class="img_menu" src="./../../Images/menu/Entradas/caldo_pollo.jpg"/>
+                </div>
+
+                <div class="col-12" id="entradas_derecha">
+                    <p class="p_entradas">Caldo de res</p>
+                    <img class="img_menu" src="./../../Images/menu/Entradas/caldo_res.jpg"/>
+                </div>
+
+                <div class="col-12" id="entradas_izquierda">
+                    <p class="p_entradas">Caldo de mote</p>
+                    <img class="img_menu" src="./../../Images/menu/Entradas/caldo_mote.jpg"/>
+                </div>
+
+            </div>
         </div>
 
         <!-- Agregando un script en la nueva rama -->
@@ -62,7 +138,7 @@
         
     <!--Inicio del pié de página-->
     <footer class="container-fluid">
-        <ul class="nav">
+        <ul class="footer">
             <li class="col">Restaurant - Mis 5 Clavelitos</li>
             <li class="col"><a href="./../../Index.html">Inicio</a></li>
             <li class="col"><a href="https://www.facebook.com" target="_blank">¡Síguenos en Facebook!</a></li>

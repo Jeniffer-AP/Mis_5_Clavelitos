@@ -1,3 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
 /* DISEÑO PARA MOBILE */
 
 /* Estilo al body */
@@ -9,23 +16,8 @@ body{
     background-position: center;
 }
 
-/* Página "INICIO" */
-/* Grid layout */
-/* .grid_contenedor_index{
-    display: grid;
-    grid-template-areas:
-    "header"
-    "presentacion"
-    "ubicacion"
-    "footer";
-    grid-template-columns: 1fr;
-} */
-
 /* Estilos al header */
 header{
-    /* display: flex; */
-    /* flex-direction: row-reverse; */
-    /* justify-content: space-between; */
     background-color: #005227;
     position: sticky;
     top: 0;
@@ -38,9 +30,9 @@ nav{
 /* Estilos al navbar */
 nav .nav{
     display: none;
-    margin-top: 0px;
+    margin-top: 0;
     padding: 0;
-    margin-left: 20px;
+    /* margin-left: 30px; */
 }
 
 
@@ -75,14 +67,78 @@ input:checked ~ .label_ham {
     background: #03bb85;
 }
 
-nav>ul>li {
+/* Menú hamburguesa */
+.nav{
+    position: absolute;
+    top: 128px;
+    right: 0;
+    width: 100%;
+  }
+  .menu{
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  div .item{
+    overflow: hidden;
+  }
+  
+  div .btn{
     display: block;
-    margin: 0;
-    padding: 10px;
-    list-style: none;
+    padding: 15px;
+    background: #005227;
+    color: white;
+    position: relative;
+    border-radius: 0px;
     border-bottom: 1px solid #ffff;
     font-family: 'Raleway', sans-serif;
-}
+  }
+
+  div .btn:hover{
+    background-color: #005227;
+  }
+  
+  div .smenu{
+    background: #03bb85;
+    overflow: hidden;
+    transition: max-height 0.3s;
+    max-height: 0;
+    font-size: 17px;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  div .smenu a{
+    display: block;
+    padding: 15px;
+    color: white;
+    font-size: 15px;
+    position: relative;
+    border-bottom: 1px solid #005227;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  div .smenu a:before{
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #dcb943;
+    left: 0;
+    top: 0;
+    transition: 0.3s;
+    opacity: 0;
+  }
+
+  div .smenu a:hover:before{
+    opacity: 1;
+  }
+
+  div .item:target .smenu{
+    max-height: 350px;
+  }
+
+  /* Aquí termina el menú hamburguesa */
 
 /*Estilo cuando el mouse pasa encima de cada link del menu*/
 nav>ul>li:hover {
@@ -104,6 +160,7 @@ li>a{
     margin-left: 20px;
 }
 
+/* Página "INICIO" */
 section>p{
     color: white;
     font-weight: bolder;
@@ -133,62 +190,41 @@ section > iframe{
     margin-bottom: 50px;
 }
 
-/* section #presentacion{
-    grid-area: presentacion;
-}
-
-section #ubicacion{
-    grid-area: ubicación;
-} */
-
 /* Estilos al footer */
 footer{
-    /* grid-area: footer;
-    display: flex;
-    flex-direction: column; */
     position: fixed;
     bottom: 0;
     left: 0;
+    right: 0;
     width: 100%;
 }
 
-footer .nav{
-    /* display: flex;
-    list-style: none; */
+footer .footer{
+    display: flex;
     background-color: #005227;
     justify-content: space-between;
     font-family: 'Raleway', sans-serif;
-    height: 40px;
+    height: 35px;
     margin-bottom: 0;
     align-items: center;
-    padding-left: 10px;
-    padding-right: 10px;
     text-align: center;
+    left: 0;
+    right: 0;
 }
 
-.nav li{
+.footer li{
     color: white;
 }
 
-/* Página "NOSOTROS" */
-/* .grid_contenedor_nosotros{
-    display: grid;
-    grid-template-areas:
-    "header"
-    "historia"
-    "dueña"
-    "footer";
-    grid-template-columns: 1fr;
-} */
-
-/* section #historia{
-    grid-area: historia;
+.footer li > a{
+    color: #ffff;
 }
 
-section #dueña{
-    grid-area: dueña;
-} */
+.footer li > a:hover{
+    color: #dcb943;
+}
 
+/* Página "NOSOTROS" */
 section>h4{
     font-family: 'Raleway', sans-serif;
     color: #ffff;
@@ -202,12 +238,11 @@ section>h1{
     margin-top: 0;
 }
 #dueña{
-    background-color: #03bb85;
+    background-color: #dcb943;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
-    /* margin: 20px; */
     right: 0;
     left: 0;
     margin-bottom: 60px;
@@ -218,83 +253,47 @@ section>h1{
 }
 
 /* Página "MENÚ" */
-/* .grid_contenedor_menu{
-    display: grid;
-    grid-template-areas:
-    "header"
-    "menu_content"
-    "footer";
-    grid-template-columns: auto;
+/* Carpeta "MENU_PLATOS" */
+/* Página "ENTRADAS" */
+#platos{
+    margin-bottom: 35px;
+    padding: 0;
 }
 
-section #contenedor_menu{
-    grid-area: menu_content;
+div .p_entradas{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#contenedor_menu{
-    margin-bottom: 30px;
-} */
-
-#menu{
-    /* display: flex; */
-    /* flex-direction: row; */
-    /* justify-content: space-between; */
-    /* width: auto; */
-    height: 250px;
-    background-color: #03bb85;
-    border: 5px solid #dcb943;
-    /* border-radius: 10px; */
-    text-align: center;
     align-items: center;
-    margin: 20px;
-}
-
-.img_menu{
-    width: 200px;
-    height: 150px;
-    /* margin-right: 20px; */
-    border-radius: 10px;
-}
-
-#cont_menu{
-    margin-top: 20px;
-    margin-bottom: 60px;
-}
-
-.p_menu{
-    /* margin-left: 20px; */
-    font-family: "Dancing script", cursive;
+    text-align: center;
+    color: #ffff;
+    font-family: 'Dancing script', cursive;
     font-size: 30px;
 }
 
-.p_menu > a{
-    text-decoration: none;
+#entradas_derecha{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #03bb85;
+    padding: 0;
+    padding-left: 20px;
 }
 
-.p_menu>a:hover{
-    color: #dcb943;
-    font-weight: bold;
+#entradas_izquierda{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    background-color: #03bb85;
+    padding: 0;
+    padding-right: 20px;
+}
+
+.img_menu{
+    width: 300px;
+    height: 200px;
 }
 
 /* Página "GALERÍA" */
-/* .galeria{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 50px;
-} */
-
-/* .galeria_fotos > section{
-    display: flex;
-    flex-direction: row;
-} */
-
 #cont_galeria{
-    /* margin-top: 20px; */
     margin-bottom: 50px;
 }
 
@@ -312,10 +311,6 @@ section #contenedor_menu{
 
 /* Página "CONTACTO" */
 form{
-    /* margin: 0 auto;
-    width: 400px;
-    margin-top: 30px;
-    margin-bottom: 80px; */
     background-color: white;
     padding: 20px;
     border-radius: 3px;
@@ -374,42 +369,11 @@ select:hover{
     margin-bottom: 60px;
 }
 
-/* CARPETA "MENU_PLATOS" */
-/*Platillos del menú*/
-.menu_platos{
-    width: 400px;
-    height: 550px;
-    border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #03bb85;
-    font-family: 'Raleway', sans-serif;
-    line-height: 2;
-    font-size: 20px;
-    padding: 20px;
-    margin-top: 60px;
-    margin-bottom: 80px;
-}
-
-.menu_platos h1{
-    text-align: center;
-    font-family: 'Dancing script', cursive;
-    color: #ffff;
-}
-
-.menu_platos ul{
-    list-style-type: circle;
-}
-
-.menu_platos ul li{
-    color: #ffff;
-}
-
-
 
 /* DISEÑO PARA DESKTOP */
+
 @media screen and (min-width: 992px){
-    /* Estilos al cbody */
+    /* Estilos al body */
     body{
         background-image: url("../Images/fondo.jpg");
         background-repeat: no-repeat;
@@ -429,17 +393,6 @@ select:hover{
         display: none;
     }
 
-    /* Página "INICIO" */
-    /* .grid_contenedor_index{
-        display: grid;
-        grid-template-areas:
-        "header header"
-        "presentacion ubicacion"
-        "footer footer";
-        grid-template-columns: auto auto;
-        grid-template-rows: auto auto auto;
-    } */
-
     /* Estilos al header */
     header{
         text-align: center;
@@ -456,8 +409,8 @@ select:hover{
         text-align: center;
     }
 
-    header.abajo nav ul{
-        background-color: #dcb943;
+    header.abajo nav div{
+        background-color: #03bb85;
         position: fixed;
         top: 0;
         right: 0;
@@ -465,8 +418,22 @@ select:hover{
         width: 100%;
     }
 
-    header.abajo nav > ul > li > a:hover{
-        color: #005227;
+    header.abajo nav .smenu{
+        margin-top: 50px;
+        left: 40%;
+        right: 40%;
+        width: 20%;
+    }
+
+    header.abajo nav div li{
+        padding: 0;
+    }
+
+    header.abajo nav > div > li > a:hover{
+        
+        background-color: #dcb943;
+        text-shadow: 0 0 8px #005227;
+        /* 0 0 8px rgba(0, 0, 0, 0.8) */
     }
 
     header.abajo .logo{
@@ -474,30 +441,37 @@ select:hover{
     }
     /* Aquí termina la rama */
 
-    
-    /* Estilos al nav */
+    /* Estilos al navbar */
     nav .nav{
-        display: flex;
-        list-style: none;
-        align-items: center;
-        justify-content: space-around;
         background-color: #005227;
         height: 50px;
-        font-family: 'Raleway', sans-serif;
-        margin-top: 0;
-        padding-left: 0;
-        margin-left: 0;
-        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        top: 200px;
+    }
+    .nav .menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        overflow: visible;
     }
 
-    nav > ul > li{
+    div .btn{
+        border: none;
         background-color: transparent;
-        border-bottom: none;
+        padding: 13px;
     }
 
-    nav > ul > li > a:hover{
+    div .btn:hover{
         color: #dcb943;
-        font-size: 20px;
+        background-color: transparent;
+    }
+
+    div .smenu{
+        margin-top: 0;
+        background-color: rgba(0, 0, 0, .5)
     }
 
     /* Estilos al footer */
@@ -505,27 +479,20 @@ select:hover{
         color: #dcb943;
     }
 
+    /* Página "INICIO" */
     #presentacion{
         padding-right: 50px;
+        margin-top: 60px;
     }
 
     section>iframe{
         width: 450px;
         height: 300px;
-        margin-top: 60px;
+        margin-top: 110px;
         
     }
 
     /* Página "NOSOTROS" */
-    /* .grid_contenedor_nosotros{
-        display: grid;
-        grid-template-areas:
-        "header header"
-        "historia dueña"
-        "footer footer";
-        grid-template-columns: auto auto;
-    } */
-    
     #historia{
         display: flex;
         flex-direction: column;
@@ -534,36 +501,10 @@ select:hover{
     }
 
     #dueña{
-        margin-top: 30px;
-    }
-
-    /* Página "MENÚ" */
-    /* #contenedor_menu{
-        display: grid;
-        grid-template-columns: auto auto;
-    } */
-
-    #menu{
-        height: 320px;
-        text-align: center;
-    }
-
-    .img_menu{
-        width: 320px;
-        height: 200px;
-    }
-
-    .p_menu{
-        font-size: 40px;
+        margin-top: 80px;
     }
 
     /* Página "GALERÍA" */
-    /* .galeria{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    } */
-
     #cont_galeria{
         margin-top: 50px;
         margin-bottom: 60px;
@@ -573,9 +514,38 @@ select:hover{
         margin: 20px;
     }
 
+    /* Página "CONTACTO" */
     #cont_form{
-        margin-top: 60px;
-        margin-bottom: 80px;
+        margin-top: 80px;
+        margin-bottom: 50px;
     }
 
+    /* Carpeta "MENU_PLATOS" */
+    /* Página "ENTRADAS" */
+    #platos{
+        margin-top: 57px;
+        margin-bottom: 35px;
+        padding: 0;
+    }
+    
+    div .p_entradas{
+        font-size: 60px;
+        right: auto;
+        left: auto;
+    }
+    
+    #entradas_derecha{
+        background-color: #dcb943;
+        padding-left: 40px;
+    }
+    
+    #entradas_izquierda{
+        background-color: #dcb943;
+        padding-right: 40px;
+    }
+    
+    .img_menu{
+        width: 582px;
+        height: 320px;
+    }
 }
