@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./../CSS/styles.css"/>
+        <title>Mis 5 Clavelitos - Sobre nosotros</title>
+        <link rel="shortcut icon" href="./../Images/favicon.png">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    </head>
+    <body>
+
+        <!--Cabecera de la página-->
+        <header class="container-fluid">
+            <div class="row">
+            <!--Logo de la página-->
+            <p class="col col-lg-12"><img src="./../Images/logo.png" class="logo"/></p>
+            <!--Barra de navegación-->
+            <nav class="col col-lg-12" class="container">
+                <input type="checkbox" id="menu_ham"></input>
+                <label for="menu_ham" class="label_ham"> ☰ </label>
+                <!-- Barra de navegación -->
+                <div class="nav">
+                    <div class="menu">
+                      <li class="item">
+                        <a href="./../Index.html" class="btn">Inicio</a>
+                      </li>
+              
+                      <li class="item">
+                        <a href="./../Pages/nosotros.html" class="btn">Nosotros</a>
+                      </li>
+              
+                      <li class="item" id="settings">
+                        <a href="#settings" class="btn">Menú</a>
+                        <div class="smenu">
+                          <a href="./../Pages/menu_platos/entradas.html">Entradas</a>
+                          <a href="./../Pages/menu_platos/ensaladas.html">Ensaladas</a>
+                          <a href="./../Pages/menu_platos/platos_de_fondo.html">Platos de fondo</a>
+                          <a href="./../Pages/menu_platos/postres.html">Postres</a>
+                          <a href="./../Pages/menu_platos/bebidas.html">Bebidas</a>
+                          <a href="./../Pages/menu_platos/menu_marino.html">Menú marino</a>
+                        </div>
+                      </li>
+              
+                      <li class="item">
+                        <a class="btn" href="./../Pages/galeria.html">Galería</a>
+                      </li>
+              
+                      <li class="item">
+                        <a class="btn" href="./../Pages/contacto.html">Contacto</a>
+                      </li>
+                    </div>
+                  </div>
+
+                <!--Fin de la lista de enlaces-->
+            </nav>
+            <!--Fin de la barra de navegación-->
+            </div>
+        </header>
+        <!--Fin del encabezado-->
+
+        <div class="container">
+            <div class="row">
+            <section class="col-12 col-lg-6" id="historia">
+                <h2>Nuestra historia</h2>
+                <p>Mis 5 clavelitos es un emprendimiento que nace a raíz de la pandemia del Covid-19, en el mes de julio del año 2020. <br/>
+                Esta situación, como a muchas personas en el mundo, provocó que la dueña y fundadora quedara desempleada, surgiendo así la idea de crear este restaurante.<br/><br/>
+                Lleva por nombre "Mis 5 Clavelitos" en honor a las cinco hijas de la dueña, la señora Evelina Pasache Muñoz,
+                quien asegura que sus hijas son lo más importante para ella y el motor de su vida.
+                <br/></p>
+            </section>
+       
+            <!--Información sobre la dueña-->
+            <section class="col-12 col-lg-6" id="dueña">
+                <h4>DUEÑA Y FUNDADORA</h4>
+                <h1>Evelina Pasache Muñoz</h1>
+                <img id="img_dueña" src="../Images/dueña1.png"/>
+                <p>
+                    ''Desde muy pequeña, me ha encantado preparar diversos platillos tradicionales de mi querida ciudad de Ica
+                    y agradezco la confianza que le brindan a mi pequeño emprendimiento.
+                    Gracias a todos por el privilegio de organizar sus cenas, celebraciones de cumpleaños, banquetes de bodas
+                    y noches tranquilas en nuestro establecimiento.
+                    Mis hijas y yo nos sentimos honradas de que haya elegido pasar tiempo con nosotras.
+                    Siempre trabajaremos para ganarnos ese privilegio.''
+                </p>
+            </section>
+            </div>
+        </div>
+
+        <!-- Agregando un script en la nueva rama -->
+        <!-- Estilo al navbar al hacer scroll -->
+        <script type="text/javascript">
+            window.addEventListener("scroll", function(){
+                var header = document.querySelector("header");
+                header.classList.toggle("abajo",window.scrollY>0);
+            })
+        </script>
+
+
+        <!--Inicio del pié de página-->
+        <footer class="container-fluid footer">
+            <ul class="row">
+                <li class="col">Restaurant - Mis 5 Clavelitos</li>
+                <li class="col"><a href="./../Index.html">Inicio</a></li>
+                <li class="col"><a href="https://www.facebook.com" target="_blank">¡Síguenos en Facebook!</a></li>
+            </ul>
+        </footer>
+        <!--Fin del pié de página-->
+
+        <!-- Bootstrap JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    </body>
+</html>

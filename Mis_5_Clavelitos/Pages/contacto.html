@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./../CSS/styles.css"/>
+        <title>Mis 5 Clavelitos - Contacto</title>
+        <link rel="shortcut icon" href="./../Images/favicon.png">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    </head>
+    <body>
+        <!--Cabecera de la página-->
+        <header class="container-fluid">
+            <div class="row">
+            <!--Logo de la página-->
+            <p class="col col-lg-12"><img src="./../Images/logo.png" class="logo"/></p>
+            <!--Barra de navegación-->
+            <nav class="col col-lg-12" class="container">
+                <input type="checkbox" id="menu_ham"></input>
+                <label for="menu_ham" class="label_ham"> ☰ </label>
+                <!-- Barra de navegación -->
+                <div class="nav">
+                    <div class="menu">
+                      <li class="item">
+                        <a href="./../Index.html" class="btn">Inicio</a>
+                      </li>
+              
+                      <li class="item">
+                        <a href="./../Pages/nosotros.html" class="btn">Nosotros</a>
+                      </li>
+              
+                      <li class="item" id="settings">
+                        <a href="#settings" class="btn">Menú</a>
+                        <div class="smenu">
+                          <a href="./../Pages/menu_platos/entradas.html">Entradas</a>
+                          <a href="./../Pages/menu_platos/ensaladas.html">Ensaladas</a>
+                          <a href="./../Pages/menu_platos/platos_de_fondo.html">Platos de fondo</a>
+                          <a href="./../Pages/menu_platos/postres.html">Postres</a>
+                          <a href="./../Pages/menu_platos/bebidas.html">Bebidas</a>
+                          <a href="./../Pages/menu_platos/menu_marino.html">Menú marino</a>
+                        </div>
+                      </li>
+              
+                      <li class="item">
+                        <a class="btn" href="./../Pages/galeria.html">Galería</a>
+                      </li>
+              
+                      <li class="item">
+                        <a class="btn" href="./../Pages/contacto.html">Contacto</a>
+                      </li>
+                    </div>
+                  </div>
+
+                <!--Fin de la lista de enlaces-->
+            </nav>
+            <!--Fin de la barra de navegación-->
+            </div>
+        </header>
+        <!--Fin del encabezado-->
+        
+        <div class="container" id="cont_form">
+        <!--Inicio del formulario-->
+        <form action="">
+            <div class="form-group">
+            <p>Nombres:</p>
+            <input type="text" class="campo">
+
+            <p>Apellidos:</p>
+            <input type="text" class="campo">
+
+            <p>E-mail:</p>
+            <input type="text" class="campo">
+
+            <p>Ciudad:</p>
+                <select>
+                    <option selected="selected">Selecciona una opción</option>
+                    <option>Amazonas</option>
+                    <option>Áncash</option>
+                    <option>Apurímac</option>
+                    <option>Arequipa</option>
+                    <option>Ayacucho</option>
+                    <option>Cajamarca</option>
+                    <option>Callao</option>
+                    <option>Cusco</option>
+                    <option>Huancavelica</option>
+                    <option>Huánuco</option>
+                    <option>Ica</option>
+                    <option>Junín</option>
+                    <option>La Libertad</option>
+                    <option>Lambayeque</option>
+                    <option>Lima</option>
+                    <option>Loreto</option>
+                    <option>Madre de Dio</option>
+                    <option>Moquegua</option>
+                    <option>Pasco</option>
+                    <option>Piura</option>
+                    <option>Puno</option>
+                    <option>San Martín</option>
+                    <option>Tacna</option>
+                    <option>Tumbes</option>
+                    <option>Ucayali</option>
+                </select><br><br>
+
+            <p>Mensaje:</p>
+            <textarea class="campo"></textarea>
+
+            <p class="center_content">
+                <input style="cursor:pointer" type="submit" class="boton" value="Enviar">
+            </p>
+            </div>
+        </form>
+        </div>
+        <!--Fin del formulario-->
+
+        <!-- Agregando un script en la nueva rama -->
+        <!-- Estilo al navbar al hacer scroll -->
+        <script type="text/javascript">
+            window.addEventListener("scroll", function(){
+                var header = document.querySelector("header");
+                header.classList.toggle("abajo",window.scrollY>0);
+            })
+        </script>
+
+        <!--Inicio del pié de página-->
+        <footer class="container-fluid footer">
+            <ul class="row">
+                <li class="col">Restaurant - Mis 5 Clavelitos</li>
+                <li class="col"><a href="./../Index.html">Inicio</a></li>
+                <li class="col"><a href="https://www.facebook.com" target="_blank">¡Síguenos en Facebook!</a></li>
+            </ul>
+        </footer>
+        <!--Fin del pié de página-->
+
+        <!-- Bootstrap JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    </body>
+</html>

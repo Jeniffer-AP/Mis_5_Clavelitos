@@ -1,0 +1,547 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* DISEÑO PARA MOBILE */
+
+/* Estilo al body */
+body{
+    background-image: url("../Images/fondo_mobile.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Estilos al header */
+header{
+    background-color: #005227;
+    position: sticky;
+    top: 0;
+}
+
+nav{
+    text-align: end;
+}
+
+/* Estilos al navbar */
+nav .nav{
+    display: none;
+    margin-top: 0;
+    padding: 0;
+    /* margin-left: 30px; */
+}
+
+
+/* Estilo del boton cuando el menú está expandido*/
+input:checked  ~ .nav{
+    display: block;
+}
+ 
+nav > input {
+    display: none;
+}
+
+.label_ham {
+    box-sizing: border-box;
+    display: inline-block;
+    border: 1px solid #ffff;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+    font-size: 30px;
+    color: #ffff;
+    background-color: #005227;
+    margin-top: 40px;
+    margin-right: 20px;
+}
+  
+input:checked ~ .label_ham {
+    background: #03bb85;
+}
+
+/* Menú hamburguesa */
+.nav{
+    position: absolute;
+    top: 128px;
+    right: 0;
+    width: 100%;
+  }
+  .menu{
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  div .item{
+    overflow: hidden;
+  }
+  
+  div .btn{
+    display: block;
+    padding: 15px;
+    background: #005227;
+    color: white;
+    position: relative;
+    border-radius: 0px;
+    border-bottom: 1px solid #ffff;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  div .btn:hover{
+    background-color: #005227;
+  }
+  
+  div .smenu{
+    background: #03bb85;
+    overflow: hidden;
+    transition: max-height 0.3s;
+    max-height: 0;
+    font-size: 17px;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  div .smenu a{
+    display: block;
+    padding: 15px;
+    color: white;
+    font-size: 15px;
+    position: relative;
+    border-bottom: 1px solid #005227;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  div .smenu a:before{
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #dcb943;
+    left: 0;
+    top: 0;
+    transition: 0.3s;
+    opacity: 0;
+  }
+
+  div .smenu a:hover:before{
+    opacity: 1;
+  }
+
+  div .item:target .smenu{
+    max-height: 350px;
+  }
+
+  /* Aquí termina el menú hamburguesa */
+
+/*Estilo cuando el mouse pasa encima de cada link del menu*/
+nav>ul>li:hover {
+    filter: brightness(110%);
+}
+
+/*Estilos a los enlaces visitados*/
+a:visited{
+    color: white;
+}
+
+li>a{
+    text-decoration: none;
+}
+
+.logo{
+    width: 150px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+/* Página "INICIO" */
+section>p{
+    color: white;
+    font-weight: bolder;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    line-height: 1.8;
+    text-align: center;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+    margin: 30px;
+}
+
+section>h3, section>h2{
+    color: #03bb85;
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    text-align: center;
+    margin: 30px;
+}
+
+section > iframe{
+    width: 400px;
+    height: 250px;
+    border-radius: 5px;
+    border: 5px solid #dcb943;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 50px;
+}
+
+/* Estilos al footer */
+.footer{
+    background-color: #005227;
+    font-family: 'Raleway', sans-serif;
+    height: 35px;
+    margin-bottom: 0;
+    position: fixed;
+    bottom: 0;
+}
+
+.footer ul{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    text-align: center;
+    padding: 8px;
+}
+
+.footer li{
+    color: white;
+}
+
+.footer li > a{
+    color: #ffff;
+}
+
+.footer li > a:hover{
+    color: #dcb943;
+}
+
+/* Página "NOSOTROS" */
+section>h4{
+    font-family: 'Raleway', sans-serif;
+    color: #ffff;
+    margin-top: 30px;
+}
+
+section>h1{
+    font-family: 'Dancing Script', cursive;
+    color: #ffff;
+    font-size: 40px;
+    margin-top: 0;
+}
+#dueña{
+    background-color: #dcb943;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    right: 0;
+    left: 0;
+    margin-bottom: 60px;
+}
+
+#img_dueña{
+    height: 250px;
+}
+
+/* Página "MENÚ" */
+/* Carpeta "MENU_PLATOS" */
+/* Página "ENTRADAS" */
+#platos{
+    margin-bottom: 35px;
+    padding: 0;
+}
+
+div .p_entradas{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ffff;
+    font-family: 'Dancing script', cursive;
+    font-size: 30px;
+}
+
+#entradas_derecha{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #03bb85;
+    padding: 0;
+    padding-left: 20px;
+}
+
+#entradas_izquierda{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    background-color: #03bb85;
+    padding: 0;
+    padding-right: 20px;
+}
+
+.img_menu{
+    width: 300px;
+    height: 200px;
+}
+
+/* Página "GALERÍA" */
+#cont_galeria{
+    margin-bottom: 50px;
+}
+
+.fotos{
+    width: 350px;
+    height: 250px;
+    border: 5px solid #dcb943;
+    text-align: center;
+}
+
+#galeria{
+    text-align: center;
+    margin: 20px;
+}
+
+/* Página "CONTACTO" */
+form{
+    background-color: white;
+    padding: 20px;
+    border-radius: 3px;
+    font-size: 15px;
+    font-family: 'Raleway', sans-serif;
+}
+
+input, textarea{
+    outline: none;
+    border: 0;
+    width: 380px;
+    font-family: 'Raleway', sans-serif;
+    color: black;
+}
+
+select{
+    font-family: 'Raleway', sans-serif;
+    width: 380px;
+    padding: 10px;
+    border: solid 1.5px #ccc;
+}
+
+select:focus{
+    border-color: #d09306;
+}
+
+select:hover{
+    color:#d09306
+}
+
+.campo{
+    border: solid 1.5px #ccc;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.campo:focus{
+    border-color: #d09306;
+}
+
+.center_content{
+    text-align: center;
+}
+
+.boton{
+    padding: 10px;
+    background-color: #d09306;
+    font-family: 'Dancing script', cursive;
+    color: white;
+    font-size: 30px;
+}
+
+#cont_form{
+    width: 440px;
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+
+
+/* DISEÑO PARA DESKTOP */
+
+@media screen and (min-width: 992px){
+    /* Estilos al body */
+    body{
+        background-image: url("../Images/fondo.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .logo{
+        width: 250px;
+    }
+
+    #menu_ham{
+        display: none;
+    }
+    .label_ham{
+        display: none;
+    }
+
+    /* Estilos al header */
+    header{
+        text-align: center;
+        align-items: center;
+        background-color: transparent;
+        /* Agregando animaciones a través de una nueva rama */
+        position: sticky;
+        top: 0;
+        width: 100%;
+        transition: 0.5s;
+    }
+
+    nav{
+        text-align: center;
+    }
+
+    header.abajo nav div{
+        background-color: #03bb85;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    header.abajo nav .smenu{
+        margin-top: 50px;
+        left: 40%;
+        right: 40%;
+        width: 20%;
+    }
+
+    header.abajo nav div li{
+        padding: 0;
+    }
+
+    header.abajo nav > div > li > a:hover{
+        
+        background-color: #dcb943;
+        text-shadow: 0 0 8px #005227;
+        /* 0 0 8px rgba(0, 0, 0, 0.8) */
+    }
+
+    header.abajo .logo{
+        display: none;
+    }
+    /* Aquí termina la rama */
+
+    /* Estilos al navbar */
+    nav .nav{
+        background-color: #005227;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        top: 200px;
+    }
+    .nav .menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        overflow: visible;
+    }
+
+    div .btn{
+        border: none;
+        background-color: transparent;
+        padding: 13px;
+    }
+
+    div .btn:hover{
+        color: #dcb943;
+        background-color: transparent;
+    }
+
+    div .smenu{
+        margin-top: 0;
+        background-color: rgba(0, 0, 0, .5)
+    }
+
+    /* Estilos al footer */
+    footer .nav > li > a:hover{
+        color: #dcb943;
+    }
+
+    /* Página "INICIO" */
+    #presentacion{
+        padding-right: 50px;
+        margin-top: 60px;
+    }
+
+    section>iframe{
+        width: 450px;
+        height: 300px;
+        margin-top: 110px;
+        
+    }
+
+    /* Página "NOSOTROS" */
+    #historia{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 50px;
+    }
+
+    #dueña{
+        margin-top: 80px;
+    }
+
+    /* Página "GALERÍA" */
+    #cont_galeria{
+        margin-top: 50px;
+        margin-bottom: 60px;
+    }
+
+    #galeria{
+        margin: 20px;
+    }
+
+    /* Página "CONTACTO" */
+    #cont_form{
+        margin-top: 80px;
+        margin-bottom: 50px;
+    }
+
+    /* Carpeta "MENU_PLATOS" */
+    /* Página "ENTRADAS" */
+    #platos{
+        margin-top: 57px;
+        margin-bottom: 35px;
+        padding: 0;
+    }
+    
+    div .p_entradas{
+        font-size: 60px;
+        right: auto;
+        left: auto;
+    }
+    
+    #entradas_derecha{
+        background-color: #dcb943;
+        padding-left: 40px;
+    }
+    
+    #entradas_izquierda{
+        background-color: #dcb943;
+        padding-right: 40px;
+    }
+    
+    .img_menu{
+        width: 582px;
+        height: 320px;
+    }
+}
